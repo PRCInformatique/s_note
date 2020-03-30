@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assembleur</title>
+	<link rel="stylesheet" type="text/css" href="Sassembleur.css">
+</head>
+<body>
+	<p>
+		<h2>Les régistres</h2>
+		Les régistres sont de petites zones memoires logées dans le processeur. Dessus, on n'y fait que des calcules, rien que du calcule. On a comme régistres basiques 4 dont <code>AX,BX,CX,DX</code>.<ol><li> <b>Le AX</b> est nommé l'Accumulteur. Il est utiliser pour faire de nombreux types de calcules.</li> <li> <b>Le BX</b> est le régistre de Base. Il est utilisé comme référence d'accès a des tableaux.</li><li> <b>Le CX</b>: registre de compteur. Il est utiliser pour les répétitions d'instructions et décalages logiques.</li><li><b>Le DX</b>: régistre de Données. Il sert d'extention à <b>AX</b></li></ol> 
+		Ces régitres contiennent chacuns 2 octets soit 16 bits et possèdent une partie haute et une partie basse soit l'octet de poids fort et celui de poids faible. On a <code>AH et AL</code>: les deux forment <code>AX</code>, ainsi de suite. On aussi des registre de 32 bits et mème de 64 bits. Il sont tous simplement des extensions des registres généraux 16 bits. Leur partie haute n'est pas directement accessible de manière isolée, et leur partie basse correspond aux registres 16 bits. Pour les nommées, on y ajoute un <code>E</code> qui signifie <b>Extension</b>. Soit <code>EAX, EBX, ECX, EDX</code>
+		<br/> Pour écrire un ligne de code en assembleur, il suffit d'utiliser un mot clés, suivie de un voire deux paramètres. On a la synthase: <code>motcle paramètre1, paramètre2</code>. Les paramètres peuvent être <b>une valeur, une lettre, un mot, une phrase ou un registre.</b> Les commentaires commence par des points virgules.
+	</p>
+	<p>
+		<h2>Les données</h2>
+		<h3>Les nombres</h3>
+		Pour ajouter un octet de données, on utilie la commande <code>db: (Define Byte)</code>; pour un mot, on a <code>dw: (Define Word)</code>; et enfin pour un double-mot, on prend <code>dd: (Define Double word)</code> et on y ajoute un nombre. Cependant, il est nécessaire de ne pas dépasser les les bornes. Soit 255 pour un octet, 65 535 pour un mot et 4 294 967 295 pour un double mot. On peut écrire plusieurs données d'une même format sur une seule ligne. soit <code>dw 754,89,523,65000</code><br>C'est possible d'écrire des nombres en d'autres bases. En base <b>binaire,</b> on fait suivre le nombre d'un <b><code>b soit 000111b</code></b>. En base <b>hexadécimal,</b> o fait suivre le nombre d'un <b><code>h soit 7A8h</code></b> ou le faire précédé de <b><code>0x soit 0x8A</code></b>
+	</p>
+</body>
+</html>
